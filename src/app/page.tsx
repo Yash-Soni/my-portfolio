@@ -1,4 +1,3 @@
-import DownloadButton from '@/app/components/DownloadButton';
 import Experience from '@/app/components/Experience';
 import Projects from '@/app/components/Projects';
 import Header from '@/app/components/Header';
@@ -27,8 +26,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        <DownloadButton />
       </main>
     </div>
   );

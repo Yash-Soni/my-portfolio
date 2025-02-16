@@ -15,7 +15,7 @@ const Experience = () => {
     {
       title: "Software Engineer",
       company: "Ally.io",
-      period: "June, 2021 - Nov, 2024",
+      period: "June, 2021 - Nov, 2021",
       description: "Worked for Ally.io, a SaaS company that helps teams to set OKRs and track progress."
     },
     // Add more experiences as needed
