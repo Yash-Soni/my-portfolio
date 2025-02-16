@@ -3,21 +3,27 @@ import ProjectCard from './ProjectCard';
 export default function Projects() {
   const projects = [
     {
-      title: "Project 1",
-      description: "A brief description of project 1",
-      technologies: ["React", "TypeScript", "Tailwind"],
-      imageUrl: "/project1.jpg",
-      githubUrl: "https://github.com/yourusername/project1",
-      liveUrl: "https://project1.com"
+      title: "Built Website Templates",
+      description: "Built a few website templates for our SMBs clients, so that they can easily get onboard their offline business to online business.",
+      technologies: ["React", "TypeScript", "TailwindCSS"],
+      liveUrl: "https://fusion.zoca.com",
+      // github: "https://github.com/yourusername/project1",
     },
     {
-      title: "Project 2",
-      description: "A brief description of project 2",
-      technologies: ["Next.js", "Node.js", "MongoDB"],
-      imageUrl: "/project2.jpg",
-      githubUrl: "https://github.com/yourusername/project2",
-      liveUrl: "https://project2.com"
-    }
+      title: "First Run Experience",
+      description: "Built a setup guide for our product, so that our clients can get started with our product on their own after onboarding.",
+      technologies: ["React.js", "TypeScript"],
+      link: "https://project2.com",
+      github: "https://github.com/yourusername/project2",
+    },
+    // {
+    //   title: "Project 2",
+    //   description: "A brief description of project 2",
+    //   technologies: ["Next.js", "Node.js", "MongoDB"],
+    //   imageUrl: "/project2.jpg",
+    //   githubUrl: "https://github.com/yourusername/project2",
+    //   liveUrl: "https://project2.com"
+    // }
   ];
 
   return (

@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl: string;
-  githubUrl: string;
-  liveUrl: string;
+  imageUrl?: string;
+  githubUrl?: string;
+  liveUrl?: string;
 }
 
 function ProjectCard({
@@ -17,11 +19,11 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-[1.02]">
-      <img
+      {imageUrl && <Image
         src={imageUrl}
         alt={title}
         className="w-full h-48 object-cover"
-      />
+      />}
       <div className="p-4">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
@@ -36,22 +38,22 @@ function ProjectCard({
           ))}
         </div>
         <div className="flex gap-4">
-          <a
+          {githubUrl && <a
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
           >
             GitHub
-          </a>
-          <a
+          </a>}
+          {liveUrl && <a
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
           >
             Live Demo
-          </a>
+          </a>}
         </div>
       </div>
     </div>

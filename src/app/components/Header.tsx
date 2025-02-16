@@ -1,8 +1,24 @@
+'use client';  // Add this at the top to mark as Client Component
+
 export default function Header() {
   return (
     <section className="py-32 text-center relative">
       {/* Decorative background element */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-gray-900 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-gray-900">
+        {/* Grid overlay with interactive cells */}
+        <div className="w-full h-full grid" style={{ gridTemplateColumns: 'repeat(auto-fill, 24px)', gridTemplateRows: 'repeat(auto-fill, 24px)' }}>
+          {[...Array(1000)].map((_, i) => (
+            <div
+              key={i}
+              className="border border-[#8080800a] cursor-pointer hover:bg-black/10 dark:hover:bg-white/10"
+              style={{
+                backgroundColor: 'transparent',
+                transition: 'background-color 0.3s ease'
+              }}
+            />
+          ))}
+        </div>
+      </div>
       
       {/* Main content */}
       <div className="space-y-8">
