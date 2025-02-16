@@ -1,8 +1,48 @@
 'use client';  // Add this at the top to mark as Client Component
 
 import ResumeButton from './ResumeButton';
+import { useState, useEffect, useMemo } from 'react';
 
 export default function Header() {
+  const titles = useMemo(() => [
+    "Senior Frontend Engineer",
+    "UI-UX Developer",
+    "React Specialist",
+    "Web Developer"
+  ], []);
+  
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    const currentTitle = titles[currentTitleIndex];
+    
+    if (isTyping) {
+      if (displayText.length < currentTitle.length) {
+        const timeoutId = setTimeout(() => {
+          setDisplayText(currentTitle.slice(0, displayText.length + 1));
+        }, 100);
+        return () => clearTimeout(timeoutId);
+      } else {
+        const timeoutId = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000); // Increased pause time to 2 seconds after completing the word
+        return () => clearTimeout(timeoutId);
+      }
+    } else {
+      if (displayText.length === 0) {
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+        setIsTyping(true);
+      } else {
+        const timeoutId = setTimeout(() => {
+          setDisplayText(displayText.slice(0, -1));
+        }, 50);
+        return () => clearTimeout(timeoutId);
+      }
+    }
+  }, [displayText, isTyping, currentTitleIndex, titles]);
+
   return (
     <section className="py-32 text-center relative">
       {/* Decorative background element */}
@@ -30,7 +70,8 @@ export default function Header() {
             Yash Soni
           </h1>
           <p className="text-2xl text-gray-600 dark:text-gray-300 tracking-wide">
-            Senior Frontend Engineer & UI-UX Designer
+            {displayText}
+            <span className="animate-pulse">|</span>
           </p>
         </div>
 
