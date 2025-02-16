@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ResumeButton from './ResumeButton';
 
 export default function Navbar() {
   return (
@@ -18,15 +19,7 @@ export default function Navbar() {
             <Link href="/contact" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
               Contact
             </Link>
-            <a
-              href="/resume.pdf"
-              download="YourName_Resume.pdf"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
+            <ResumeButton />
           </div>
         </div>
       </div>

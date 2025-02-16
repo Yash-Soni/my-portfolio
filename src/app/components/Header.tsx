@@ -1,5 +1,7 @@
 'use client';  // Add this at the top to mark as Client Component
 
+import ResumeButton from './ResumeButton';
+
 export default function Header() {
   return (
     <section className="py-32 text-center relative">
@@ -56,36 +58,17 @@ export default function Header() {
             </span>
             <span className="text-gray-700 dark:text-gray-300">50+ Projects Delivered</span>
           </div> */}
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <span className="text-blue-600 dark:text-blue-400">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </span>
             <span className="text-gray-700 dark:text-gray-300">Freelance Available</span>
-          </div>
+          </div> */}
         </div>
 
-        <a 
-          href="/Yash_Resume_25.pdf" 
-          download="Yash_Resume.pdf"
-          className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-150 ease-in-out"
-        >
-          <span>My Resume</span>
-          <svg 
-            className="w-4 h-4 ml-2" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            />
-          </svg>
-        </a>
+        <ResumeButton />
       </div>
     </section>
   );
