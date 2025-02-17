@@ -8,11 +8,8 @@ import {
   SiTailwindcss,
   SiHtml5,
   SiCss3,
-  SiPython,
   SiGit,
-  SiDocker,
-  SiMysql,
-  SiMongodb 
+  SiPostman
 } from 'react-icons/si';
 
 export default function About() {
@@ -24,6 +21,7 @@ export default function About() {
     { name: 'TailwindCSS', icon: SiTailwindcss, color: '#06B6D4' },
     { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
     { name: 'CSS3', icon: SiCss3, color: '#1572B6' },
+    { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
     // { name: 'Python', icon: SiPython, color: '#3776AB' },
     { name: 'Git', icon: SiGit, color: '#F05032' },
     // { name: 'Docker', icon: SiDocker, color: '#2496ED' },
@@ -39,10 +37,10 @@ export default function About() {
             transform: translateY(0px);
           }
           50% {
-            transform: translateY(-2px);
+            transform: translateY(-2px) rotate(5deg);
           }
           100% {
-            transform: translateY(0px);
+            transform: translateY(0px) rotate(0deg);
           }
         }
       `}</style>
@@ -61,13 +59,13 @@ export default function About() {
               {technologies.map((tech) => (
                 <div 
                   key={tech.name}
-                  className="group relative flex flex-wrap items-center justify-center"
+                  className="group relative flex flex-wrap items-center justify-center rounded-lg"
                 >
                   <tech.icon 
-                    className="w-12 h-12 md:w-20 md:h-20 transition-transform duration-300 ease-in-out group-hover:scale-110 animate-[float_1s_ease-in-out_infinite]" 
+                    className="w-12 h-12 md:w-20 md:h-20 transition-transform duration-300 ease-in-out animate-[float_1s_ease-in-out_infinite]" 
                     style={{ color: tech.color }}
                   />
-                  <span className="absolute -bottom-6 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
+                  <span className="absolute -bottom-6 scale-0 transition-all rounded bg-gray-800 p-2 text-s text-white group-hover:scale-100">
                     {tech.name}
                   </span>
                 </div>
