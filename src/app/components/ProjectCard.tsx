@@ -50,7 +50,7 @@ function ProjectCard({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+            className="text-green-400 dark:text-green-400 hover:text-green-500 dark:hover:text-green-500"
           >
             Live Demo
           </a>}

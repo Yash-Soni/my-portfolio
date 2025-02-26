@@ -24,9 +24,9 @@ export default function Projects() {
     {
       title: "First Run Experience",
       description: "Built a setup guide for our product, so that our clients can get started with our product on their own after onboarding.",
-      technologies: ["React.js", "TypeScript"],
-      link: "https://project2.com",
-      github: "https://github.com/yourusername/project2",
+      technologies: ["React.js", "TypeScript", "Ruby on Rails"],
+      // link: "https://project2.com",
+      // github: "https://github.com/yourusername/project2",
     },
     // Add more projects as needed
   ];
