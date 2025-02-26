@@ -11,15 +11,15 @@ function SkillSection() {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <AiFillStar className="w-4 h-4 text-yellow-400 mr-2" />
-                  React & React Native
-                </li>
-                <li className="flex items-center">
-                  <AiFillStar className="w-4 h-4 text-yellow-400 mr-2" />
-                  TypeScript
+                  ReactJs
                 </li>
                 <li className="flex items-center">
                   <AiFillStar className="w-4 h-4 text-yellow-400 mr-2" />
                   Next.js
+                </li>
+                <li className="flex items-center">
+                  <AiFillStar className="w-4 h-4 text-yellow-400 mr-2" />
+                  TypeScript
                 </li>
               </ul>
             </div>
@@ -34,10 +34,10 @@ function SkillSection() {
                   <AiFillStar className="w-4 h-4 text-yellow-400 mr-2" />
                   Figma
                 </li>
-                <li className="flex items-center">
+                {/* <li className="flex items-center">
                   <AiFillStar className="w-4 h-4 text-yellow-400 mr-2" />
                   Animation Libraries
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 p-6 rounded-xl">
