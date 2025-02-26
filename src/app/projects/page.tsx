@@ -9,6 +9,12 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
+      title: "Internal Tool for Website Editing",
+      description: "Built an internal tool for our editing team to edit our clients' websites.",
+      technologies: ["React", "TypeScript", "TailwindCSS"],
+      link: "https://raft-staging.zoca.ai",
+    },
+    {
       title: "Built Website Templates",
       description: "Built a few website templates for our SMBs clients, so that they can easily get onboard their offline business to online business.",
       technologies: ["React", "TypeScript", "TailwindCSS"],

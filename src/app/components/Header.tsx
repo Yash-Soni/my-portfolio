@@ -108,9 +108,56 @@ export default function Header() {
             <span className="text-gray-700 dark:text-gray-300">Freelance Available</span>
           </div> */}
         </div>
+        {/* Skills section */}
+        <div className="max-w-2xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              "React", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "REST API",
+              "Git", "Docker"
+            ].map((skill, index) => (
+              <span
+                key={skill}
+                className={`
+                  px-4 py-2 rounded-full text-sm relative overflow-hidden
+                  bg-gradient-to-r from-blue-500/10 to-purple-500/10 
+                  dark:from-blue-500/20 dark:to-purple-500/20
+                  text-gray-700 dark:text-gray-200
+                  hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20
+                  transform transition-all duration-300 ease-in-out
+                  border border-blue-200/30 dark:border-purple-500/30
+                  backdrop-blur-sm
+                `}
+                style={{
+                  animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`
+                }}
+              >
+                <span className="relative z-10">{skill}</span>
+                <div 
+                  className={`absolute inset-0 bg-gradient-to-r from-blue-600/0 to-purple-600/0 
+                            hover:from-blue-600/10 hover:to-purple-600/10 
+                            dark:hover:from-blue-400/20 dark:hover:to-purple-400/20 
+                            transition-all duration-300`}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
 
         <ResumeButton />
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 } 

@@ -1,7 +1,14 @@
+import Link from 'next/link';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
   const projects = [
+    {
+      title: "Internal Tool for Website Editing",
+      description: "Built an internal tool for our editing team to edit our clients' websites.",
+      technologies: ["React", "TypeScript", "TailwindCSS"],
+      link: "https://raft-staging.zoca.ai",
+    },
     {
       title: "Built Website Templates",
       description: "Built a few website templates for our SMBs clients, so that they can easily get onboard their offline business to online business.",
@@ -9,13 +16,13 @@ export default function Projects() {
       liveUrl: "https://fusion.zoca.com",
       // github: "https://github.com/yourusername/project1",
     },
-    {
-      title: "First Run Experience",
-      description: "Built a setup guide for our product, so that our clients can get started with our product on their own after onboarding.",
-      technologies: ["React.js", "TypeScript"],
-      link: "https://project2.com",
-      github: "https://github.com/yourusername/project2",
-    },
+    // {
+    //   title: "First Run Experience",
+    //   description: "Built a setup guide for our product, so that our clients can get started with our product on their own after onboarding.",
+    //   technologies: ["React.js", "TypeScript"],
+    //   link: "https://project2.com",
+    //   github: "https://github.com/yourusername/project2",
+    // },
     // {
     //   title: "Project 2",
     //   description: "A brief description of project 2",
@@ -35,6 +42,11 @@ export default function Projects() {
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
+      </div>
+      <div className="flex justify-center mt-6">
+        <Link href="/projects" className="text-blue-500 hover:text-blue-600">
+          View All Projects
+        </Link>
       </div>
     </section>
   );

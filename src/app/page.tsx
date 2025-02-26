@@ -11,7 +11,7 @@ export default function Home() {
         <Experience />
         <Projects />
 
-        <section className="py-10 px-6 backdrop-blur-md bg-white/50 dark:bg-gray-800/50 rounded-xl shadow-lg mb-8">
+        {/* <section className="py-10 px-6 backdrop-blur-md bg-white/50 dark:bg-gray-800/50 rounded-xl shadow-lg mb-8">
           <h2 className="text-2xl font-bold mb-6 border-b pb-2 border-gray-200 dark:border-gray-700">
             Skills
           </h2>
@@ -25,7 +25,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
