@@ -54,16 +54,37 @@ export default function Navbar() {
           {isMenuOpen && (
             <div className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 md:hidden">
               <div className="flex flex-col justify-center items-center p-4 space-y-4">
-                <Link href="/about" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
+              <Link 
+                  href="/" 
+                  className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   About
                 </Link>
-                <Link href="/projects" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
+                <Link 
+                  href="/projects" 
+                  className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Projects
                 </Link>
-                <Link href="/contact" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
+                {/* <Link 
+                  href="/contact" 
+                  className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Contact
-                </Link>
-                <ResumeButton />
+                </Link> */}
+                <div onClick={() => setIsMenuOpen(false)}>
+                  <ResumeButton />
+                </div>
               </div>
             </div>
           )}

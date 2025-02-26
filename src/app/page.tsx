@@ -2,7 +2,6 @@ import Experience from '@/app/components/Experience';
 import Projects from '@/app/components/Projects';
 import Header from '@/app/components/Header';
 import SkillSection from './components/SkillSection';
-import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -30,8 +29,6 @@ export default function Home() {
           </div>
         </section> */}
       </main>
-
-      <Footer />
     </div>
   );
 }
