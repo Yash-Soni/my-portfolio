@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-6">
             <Link href="/about" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
-              About
+              About Me
             </Link>
             <Link href="/projects" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
               Projects
@@ -66,7 +66,7 @@ export default function Navbar() {
                   className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
+                  About Me
                 </Link>
                 <Link 
                   href="/projects" 
