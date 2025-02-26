@@ -1,9 +1,14 @@
+import ProjectDetailCard from "../components/ProjectDetailCard";
+
 interface Project {
   title: string;
   description: string;
   technologies: string[];
+  keyPoints: string[];
   link?: string;
   github?: string;
+  location: string;
+  image?: string;
 }
 
 export default function Projects() {
@@ -12,21 +17,49 @@ export default function Projects() {
       title: "Internal Tool for Website Editing",
       description: "Built an internal tool for our editing team to edit our clients' websites.",
       technologies: ["React", "TypeScript", "TailwindCSS"],
+      keyPoints: [
+        "Streamlined website editing process",
+        "Improved team productivity",
+        "Real-time preview capabilities"
+      ],
       link: "https://raft-staging.zoca.ai",
+      location: "Zoca (Timely.ai)",
     },
     {
       title: "Built Website Templates",
       description: "Built a few website templates for our SMBs clients, so that they can easily get onboard their offline business to online business.",
       technologies: ["React", "TypeScript", "TailwindCSS"],
+      keyPoints: [
+        "Customizable templates",
+        "Enhanced user experience",
+        "Responsive design"
+      ],
       link: "https://fusion.zoca.com",
-      github: "https://github.com/yourusername/project1",
+      // github: "https://github.com/yourusername/project1",
+      location: "Zoca (Timely.ai)",
+      image: "https://via.placeholder.com/300x200",
+    },
+    {
+      title: "Deactivation, Deletion and Reactivation of Organizations",
+      description: "Built a feature for our product at Viva Goals, so that our clients can deactivate, delete and reactivate organizations for their users.",
+      technologies: ["React", "TypeScript", "Ruby on Rails"],
+      keyPoints: [
+        "Streamlined organization management in UI",
+        "Improved user experience",
+        "Enhanced security"
+      ],
+      location: "Microsoft Viva Goals",
     },
     {
       title: "First Run Experience",
       description: "Built a setup guide for our product, so that our clients can get started with our product on their own after onboarding.",
       technologies: ["React.js", "TypeScript", "Ruby on Rails"],
-      // link: "https://project2.com",
-      // github: "https://github.com/yourusername/project2",
+      keyPoints: [
+        "Simplified onboarding process",
+        "Improved user satisfaction",
+        "Enhanced product adoption"
+      ],
+      location: "Microsoft Viva Goals",
     },
     // Add more projects as needed
   ];
@@ -37,47 +70,17 @@ export default function Projects() {
         <h1 className="text-4xl font-bold mb-8">My Projects</h1>
         <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <ProjectDetailCard
               key={index}
-              className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
-              <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span 
-                    key={tech}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                {project.link && (
-                  <a 
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
-                  >
-                    Live Demo →
-                  </a>
-                )}
-                {project.github && (
-                  <a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                  >
-                    GitHub →
-                  </a>
-                )}
-              </div>
-            </div>
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              keyPoints={project.keyPoints}
+              demoUrl={project.link || ''}
+              githubUrl={project.github || ''}
+              location={project.location}
+              image={project.image || ''}
+            />
           ))}
         </div>
       </main>
