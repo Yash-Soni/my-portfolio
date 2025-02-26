@@ -27,7 +27,7 @@ function ProjectDetailCard({
   // image
 }: ProjectCardProps) {
   return (
-    <div className="max-w-2xl bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+    <div className="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
       {/* {image && <div className="relative h-48 overflow-hidden">
         <Image 
           src={image} 
