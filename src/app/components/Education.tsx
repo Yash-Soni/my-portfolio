@@ -39,7 +39,7 @@ const EducationTimeline = ({ qualifications }: { qualifications: Qualification[]
 
       <div className="mt-16 text-center">
         <div className="w-24 h-0.5 bg-blue-500 mx-auto mb-6"></div>
-        <p className="text-gray-600 mb-6">Let's connect and discuss opportunities!</p>
+        <p className="text-gray-600 mb-6">Let&apos;s connect and discuss opportunities!</p>
         <div className="flex justify-center gap-4">
           <a 
             href="https://linkedin.com/in/ysoni264" 
