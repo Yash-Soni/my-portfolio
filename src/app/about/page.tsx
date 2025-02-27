@@ -116,9 +116,9 @@ export default function About() {
                 I am a quick learner and I am always looking to learn new technologies and frameworks.
               </span>
               <span className="block mt-4 transition-all duration-500 hover:translate-x-2">
-                With over 3 years of experience at companies like Microsoft and Ally.io, I've led teams, 
+                {`With over 3 years of experience at companies like Microsoft and Ally.io, I've led teams, 
                 developed critical features, and even registered a patent. My expertise spans from building 
-                scalable frontend architectures to optimizing web performance and leading complex migrations.
+                scalable frontend architectures to optimizing web performance and leading complex migrations.`}
               </span>
               <span className="block mt-4 transition-all duration-500 hover:translate-x-2">
                 {`I hold a Master's degree in Computer Science from IIT Guwahati and a Bachelor's in Computer 

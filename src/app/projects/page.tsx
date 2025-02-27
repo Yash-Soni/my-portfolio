@@ -22,7 +22,7 @@ export default function Projects() {
         "Improved team productivity",
         "Real-time preview capabilities"
       ],
-      link: "https://raft-staging.zoca.ai",
+      // link: "https://raft-staging.zoca.ai",
       location: "Zoca (Timely.ai)",
     },
     {
