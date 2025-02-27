@@ -7,7 +7,7 @@ export default function Projects() {
       title: "Internal Tool for Website Editing",
       description: "Built an internal tool for our editing team to edit our clients' websites.",
       technologies: ["Next.js", "React", "TypeScript", "TailwindCSS"],
-      liveUrl: "https://raft-staging.zoca.ai",
+      // liveUrl: "https://raft-staging.zoca.ai",
     },
     {
       title: "Built Website Templates",
