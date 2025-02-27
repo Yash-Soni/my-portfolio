@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface WorkExperience {
   title: string;
@@ -16,7 +17,20 @@ const WorkExperienceTimeline = ({ experiences }: { experiences: WorkExperience[]
       <div className="relative">
         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-400"></div>
         {experiences.map((experience: WorkExperience, index: number) => (
-          <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} relative mb-10`}>
+          <motion.div 
+            key={index} 
+            className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} relative mb-10`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ 
+              opacity: 1, 
+              y: 0,
+              transition: { 
+                duration: 0.5,
+                delay: 0.1 * index // Adds a slight delay for each card
+              }
+            }}
+            viewport={{ once: true, margin: "-40px" }}
+          >
             {/* {experience.logoUrl && <div className="w-1/2 flex items-center justify-center">
               <img 
                 src={experience.logoUrl} 
@@ -38,14 +52,14 @@ const WorkExperienceTimeline = ({ experiences }: { experiences: WorkExperience[]
               <p className="mb-4 text-gray-700 font-semibold text-left">{experience.company}</p>
               <ul className="space-y-2 text-gray-600">
                 {experience.description.map((desc: string, descIndex: number) => (
-                  <li key={descIndex} className="flex items-start">
+                  <li key={descIndex} className="flex items-start text-justify">
                     <span className="inline-block w-2 h-2 bg-blue-400 rounded-full mt-2 mr-2"></span>
-                    <span>{desc}</span>
+                    <span dangerouslySetInnerHTML={{ __html: desc }}></span>
                   </li>
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

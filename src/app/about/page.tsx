@@ -37,9 +37,10 @@ export default function About() {
       date: 'Nov, 2024 - Present',
       company: 'Zoca',
       description: [
-        'Led team of 3 developers in building responsive web applications',
-        'Implemented modern frontend architecture using React and TypeScript',
-        'Improved site performance by 40% through optimization techniques',
+        '<strong>Team Leadership:</strong> Led a team of three developers to build responsive websites for US-based SMBs.',
+        '<strong>Modern Frontend Architecture:</strong> Built scalable solutions using Next.js and TypeScript.',
+        '<strong>Performance Optimization:</strong> Improved LCP, FCP, and SEO for better website speed and visibility.',
+        '<strong>Internal Tool Development:</strong> Created a website management tool for website administration.',
       ],
     },
     {
@@ -47,9 +48,10 @@ export default function About() {
       date: 'Nov, 2021 - June, 2024',
       company: 'Microsoft Viva Goals',
       description: [
-        'Developed and maintained multiple client websites',
-        'Created reusable component library using Vue.js',
-        'Collaborated with UX team to implement responsive designs',
+        '<strong>Development:</strong> Developed and maintained critical UI features for the Viva Goals webapp',
+        '<strong>Leadership:</strong> Spearheaded First Run Experience, Audit Logging in Viva Goals, Organizations Lifecycle UI and many other critical features',
+        '<strong>Performance:</strong> Improved webapp performance by 20% through React profiler optimization and efficient hook implementations',
+        '<strong>Patent:</strong> Registered a patent for the React Migration feature',
       ],
     },
     {
@@ -57,9 +59,9 @@ export default function About() {
       date: 'June, 2021 - Oct, 2021',
       company: 'Ally.io',
       description: [
-        'Built and maintained client websites using HTML, CSS, and JavaScript',
-        'Implemented responsive designs and mobile-first approaches',
-        'Assisted in the development of internal tools and applications',
+        '<strong>Development:</strong> Worked as Software Engineer for a SaaS based startup',
+        '<strong>Localization:</strong> Worked on Localization/ Globalization of the webapp for different languages',
+        '<strong>Migration:</strong> Worked on migrating the legacy codebase in Angular to modern architecture in React',
       ],
     },
   ];
@@ -88,13 +90,53 @@ export default function About() {
   return (
     <div className="min-h-screen p-8">
       <main className="max-w-4xl mx-auto pt-20 pb-4">
-        <h1 className="text-4xl font-bold mb-8">About Me</h1>
+        <h1 className="text-4xl font-bold mb-8 relative animate-fade-in-down">
+          <span className="relative inline-block">
+            About Me
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-blue-500 rounded-full 
+              animate-[width-expand_1s_ease-out]"></span>
+          </span>
+        </h1>
         <div className="prose dark:prose-invert">
-          <p>
-            I am a Senior Frontend Engineer at Zoca, where I build products for SMBs based out of USA. I am a passionate developer who loves to build products that are useful and impactful. 
-            I am a quick learner and I am always looking to learn new technologies and frameworks.
-            Currently, the technologies I am working with are React, TypeScript, TailwindCSS, Next.js.
-          </p>
+          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-lg border border-gray-200 
+            dark:border-gray-700 hover:shadow-xl transition-all duration-300 
+            animate-fade-in-up hover:scale-[1.02] hover:border-blue-500/50">
+            <p className="text-lg leading-relaxed space-y-4 relative">
+              <span className="block font-medium text-blue-600 dark:text-blue-400 text-xl mb-4 
+                hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300
+                before:content-[''] before:absolute before:-left-4 before:top-2 before:w-2 before:h-8 
+                before:bg-blue-500/50 before:rounded-full">
+                👋 Hello!
+              </span>
+              <span className="block transition-all duration-500 hover:translate-x-2">
+                I am a Senior Frontend Engineer at Zoca, where I build products for SMBs based out of USA.
+              </span>
+              <span className="block mt-4 transition-all duration-500 hover:translate-x-2">
+                I am a passionate developer who loves to build products that are useful and impactful. 
+                I am a quick learner and I am always looking to learn new technologies and frameworks.
+              </span>
+              <span className="block mt-4 transition-all duration-500 hover:translate-x-2">
+                With over 3 years of experience at companies like Microsoft and Ally.io, I've led teams, 
+                developed critical features, and even registered a patent. My expertise spans from building 
+                scalable frontend architectures to optimizing web performance and leading complex migrations.
+              </span>
+              <span className="block mt-4 transition-all duration-500 hover:translate-x-2">
+                {`I hold a Master's degree in Computer Science from IIT Guwahati and a Bachelor's in Computer 
+                Science Engineering, providing me with a strong foundation in both theoretical concepts and 
+                practical applications.`}
+              </span>
+              <span className="block mt-4 font-medium text-gray-600 dark:text-gray-300 
+                backdrop-blur-sm bg-white/5 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                Currently working with: 
+                <span className="text-blue-500 dark:text-blue-400 ml-2 inline-flex gap-2">
+                  <span className="hover:scale-110 transition-transform duration-200">React</span> •
+                  <span className="hover:scale-110 transition-transform duration-200">Next.js</span> •
+                  <span className="hover:scale-110 transition-transform duration-200">TypeScript</span> •
+                  <span className="hover:scale-110 transition-transform duration-200">TailwindCSS</span> •
+                </span>
+              </span>
+            </p>
+          </div>
 
           <div className="mt-16">
             <h2 className="text-2xl font-semibold mb-8">Languages & Technologies</h2>
