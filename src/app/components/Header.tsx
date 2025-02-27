@@ -112,7 +112,7 @@ export default function Header() {
         <div className="max-w-2xl mx-auto">
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              "React", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "REST API",
+              "React", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "REST API", "Postman",
               "Git", "Docker"
             ].map((skill, index) => (
               <span
