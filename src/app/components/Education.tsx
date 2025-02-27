@@ -13,7 +13,7 @@ const EducationTimeline = ({ qualifications }: { qualifications: Qualification[]
       <h2 className="text-left mb-8 text-3xl font-extrabold text-gray-800 tracking-wide">
         Educational Journey
       </h2>
-      <div className="relative pl-8">
+      <div className="relative md:pl-8">
         {/* <div className="absolute top-0 bottom-0 left-3 w-0.5 bg-gradient-to-b from-blue-400 to-purple-400"></div> */}
         {qualifications?.map((qualification: Qualification, index: number) => (
           <div
@@ -23,7 +23,7 @@ const EducationTimeline = ({ qualifications }: { qualifications: Qualification[]
             <div className="absolute top-1 left-[-10px] w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full border-2 border-white shadow"></div>
             <div className="w-full left-0">
               <div className="flex justify-between mb-3">
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-gray-800 w-[80%]">
                   {qualification.degree}
                 </h3>
                 <span className="text-gray-600">{qualification.date}</span>

@@ -69,13 +69,13 @@ export default function About() {
   const educationData = [
     {
       degree: 'Master of Technology in Computer Science',
-      date: '2019 - 2021',
+      date: '2019 - 21',
       institution: 'Indian Institute of Technology, Guwahati',
       // description: 'Specialized in Artificial Intelligence and Machine Learning.',
     },
     {
       degree: 'Bachelor of Engineering in Computer Science and Engineering',
-      date: '2015 - 2019',
+      date: '2015 - 19',
       institution: 'Shri Vaishnav Institute of Technology and Science, Indore',
       // description: 'Focused on web development and database management.',
     },
