@@ -68,7 +68,7 @@ export default function About() {
 
   const educationData = [
     {
-      degree: 'Master of Science in Computer Science',
+      degree: 'Master of Technology in Computer Science',
       date: '2019 - 2021',
       institution: 'Indian Institute of Technology, Guwahati',
       // description: 'Specialized in Artificial Intelligence and Machine Learning.',
