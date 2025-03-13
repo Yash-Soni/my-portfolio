@@ -1,9 +1,11 @@
 'use client';
-import { useState } from 'react';
-import { db } from '@/firebaseConfig'; // You'll need to create this
-import { collection, addDoc } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
+import type { Firestore } from 'firebase/firestore';
+import { collection } from 'firebase/firestore/lite';
+import { addDoc } from 'firebase/firestore/lite';
 
 export default function Contact() {
+  const [firestore, setFirestore] = useState<Firestore | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,12 +18,37 @@ export default function Contact() {
     message: string;
   }>({ type: null, message: '' });
 
+  useEffect(() => {
+    // Initialize Firebase only on the client side
+    const initializeFirebase = async () => {
+      const { initializeApp } = await import('firebase/app');
+      const { getFirestore } = await import('firebase/firestore');
+
+      const firebaseConfig = {
+        apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+        authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+        projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+        storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+        appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      setFirestore(db);
+    };
+
+    initializeFirebase();
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {      
-      await addDoc(collection(db, 'contacts'), {
+    try {
+      if (!firestore) throw new Error('Firestore not initialized');
+      
+      await addDoc(collection(firestore, 'contacts'), {
         ...formData,
         timestamp: new Date(),
       });
