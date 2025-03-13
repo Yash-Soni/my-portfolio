@@ -44,9 +44,9 @@ export default function Navbar() {
             <Link href="/projects" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
               Projects
             </Link>
-            {/* <Link href="/contact" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
+            <Link href="/contact" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
               Contact
-            </Link> */}
+            </Link>
             <ResumeButton />
           </div>
 
