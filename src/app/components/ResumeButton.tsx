@@ -1,7 +1,7 @@
 export default function ResumeButton() {
   return (
     <a 
-      href="/Yash_Resume_March_25.pdf" 
+      href="/YashSoniResume.pdf" 
       download="Yash_Resume.pdf"
       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 
         hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg 
