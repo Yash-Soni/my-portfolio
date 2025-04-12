@@ -65,7 +65,7 @@ function ProjectDetailCard({
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <GoCode size={18} className="text-purple-500" />
-            Technologies Used
+            Tools/ Technologies Used
           </h3>
           <div className="flex flex-wrap gap-2">
             {technologies?.map((tech, index) => (

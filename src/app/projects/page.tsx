@@ -14,13 +14,31 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
+      title: "Performance Optimization of Zoca Websites",
+      description: "Optimized the performance of Zoca websites to PageSpeed Insights score 90+ (from 65) by removing the unused code and images.",
+      technologies: ["Next.js", "Lighthouse", "PageSpeed Insights", "Core Web Vitals"],
+      keyPoints: [
+        "Improved PageSpeed Insights score from 65 to 90+",
+        "Optimized image loading with lazy loading and proper sizing",
+        "Optimized utilization of preconnect, prefetch and preload",
+        "Proper Tree Shaking for dead code, comments and log statements elimination",
+        "Implemented code splitting and dynamic imports",
+        "Minimized LCP from 7.5s to 2.5s, FCP from 3.5s to 0.8s",
+        "Enhanced Core Web Vitals metrics (LCP, FCP, CLS)"
+      ],
+      location: "Zoca (Timely.ai)",
+    },
+    
+    {
       title: "Internal Tool for Website Editing",
       description: "Built an internal tool for our editing team to edit our clients' websites.",
       technologies: ["React", "TypeScript", "TailwindCSS"],
       keyPoints: [
         "Streamlined website editing process",
         "Improved team productivity",
-        "Real-time preview capabilities"
+        "Real-time preview capabilities",
+        "Responsive design",
+        
       ],
       // link: "https://raft-staging.zoca.ai",
       location: "Zoca (Timely.ai)",
@@ -32,7 +50,10 @@ export default function Projects() {
       keyPoints: [
         "Customizable templates",
         "Enhanced user experience",
-        "Responsive design"
+        "Responsive design",
+        "Fast loading performance",
+        "Mobile-first approach",
+        "SEO friendly"
       ],
       link: "https://fusion.zoca.com",
       // github: "https://github.com/yourusername/project1",

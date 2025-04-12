@@ -4,6 +4,12 @@ import ProjectCard from './ProjectCard';
 export default function Projects() {
   const projects = [
     {
+      title: "Performance Optimization of Zoca Websites",
+      description: "Optimized the performance of Zoca websites to PageSpeed Insights score 90+ from 65 by removing the unused code and images.",
+      technologies: ["Next.js", "Lighthouse", "PageSpeed Insights", "Core Web Vitals"],
+      liveUrl: "https://test.zoca.com",
+    },
+    {
       title: "Internal Tool for Website Editing",
       description: "Built an internal tool for our editing team to edit our clients' websites.",
       technologies: ["Next.js", "React", "TypeScript", "TailwindCSS"],
