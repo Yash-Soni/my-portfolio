@@ -1,6 +1,6 @@
-import Experience from '@/app/components/Experience';
-import Projects from '@/app/components/Projects';
-import Header from '@/app/components/Header';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Header from './components/Header';
 import SkillSection from './components/SkillSection';
 
 export default function Home() {

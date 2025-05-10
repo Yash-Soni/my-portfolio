@@ -1,21 +1,23 @@
-interface BlogPageProps {
-  params: {
-    slug: string;
-  };
-}
+// import { PageProps } from "next";
+import { Blog } from "../page";
 
-export default function BlogPost({ params }: BlogPageProps) {
+// type BlogPageProps = {
+//   blog: Blog;
+//   searchParams?: { [key: string]: string | string[] | undefined };
+// };
+
+function BlogPost({ blog }: { blog: Blog }) {
   // This is a placeholder. You would typically fetch the blog content based on the slug
-  const blog = {
-    title: "Understanding React Server Components",
-    content: "This is a placeholder content. In a real application, this would be fetched from your CMS or database based on the slug.",
-    date: "2024-03-26"
+  const displayBlog = {
+    title: blog.title,
+    content: blog.description,
+    date: blog.date
   };
 
   return (
     <main className="max-w-4xl mx-auto pt-24 pb-4 px-4">
       <article className="prose dark:prose-invert lg:prose-xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
+        <h1 className="text-4xl font-bold mb-4">{displayBlog.title}</h1>
         <div className="text-gray-600 dark:text-gray-400 mb-8">
           {new Date(blog.date).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -24,7 +26,7 @@ export default function BlogPost({ params }: BlogPageProps) {
           })}
         </div>
         <div className="mt-8">
-          {blog.content}
+          {displayBlog.content}
         </div>
       </article>
     </main>
@@ -44,3 +46,5 @@ export async function generateStaticParams() {
     slug: slug,
   }));
 } 
+
+export default BlogPost;

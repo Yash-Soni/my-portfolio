@@ -1,21 +1,31 @@
 import BlogCard from '../components/BlogCard';
 
 // This would typically come from your CMS or API
-const blogs = [
+export interface Blog {
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+}
+
+const blogs: Blog[] = [
   {
     title: "Understanding React Server Components",
     description: "React Server Components are a new feature that allows you to write components that run only on the server. This can help reduce the bundle size and improve performance.",
-    slug: "understanding-react-server-components"
+    slug: "understanding-react-server-components",
+    date: "2024-03-26"
   },
   {
     title: "The Power of Next.js App Router",
     description: "Next.js 13 introduced a new App Router with revolutionary features like nested layouts, server components, streaming, and more. Let's explore how it transforms web development.",
-    slug: "power-of-nextjs-app-router"
+    slug: "power-of-nextjs-app-router",
+    date: "2024-03-26"
   },
   {
     title: "Mastering TypeScript for React",
     description: "TypeScript has become an essential tool for React developers. Learn how to leverage TypeScript's type system to write more maintainable and error-free React applications.",
-    slug: "mastering-typescript-react"
+    slug: "mastering-typescript-react",
+    date: "2024-03-26"
   }
 ];
 
@@ -31,7 +41,7 @@ export default function Blogs() {
       </h1>
       
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-        {blogs.map((blog) => (
+        {blogs.map((blog: Blog) => (
           <BlogCard
             key={blog.slug}
             title={blog.title}
