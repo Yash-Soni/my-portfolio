@@ -1,0 +1,22 @@
+# Rails backend
+/backend/log/*
+/backend/tmp/*
+/backend/.env
+/backend/*.sqlite3
+/backend/*.sqlite3-*
+/backend/public/assets
+/backend/.byebug_history
+
+# Next.js frontend
+/frontend/.next
+/frontend/node_modules
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+
+# System files
+.DS_Store
+.idea/
+.vscode/ 
