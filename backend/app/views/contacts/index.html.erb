@@ -1,0 +1,34 @@
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6">Contact Messages</h1>
+  
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white border border-gray-300">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="px-6 py-3 border-b text-left">Name</th>
+          <th class="px-6 py-3 border-b text-left">Email</th>
+          <th class="px-6 py-3 border-b text-left">Phone</th>
+          <th class="px-6 py-3 border-b text-left">Message</th>
+          <th class="px-6 py-3 border-b text-left">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @contacts.any? %>
+          <% @contacts.each do |contact| %>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 border-b"><%= contact.name %></td>
+              <td class="px-6 py-4 border-b"><%= contact.email %></td>
+              <td class="px-6 py-4 border-b"><%= contact.phone %></td>
+              <td class="px-6 py-4 border-b"><%= contact.message %></td>
+              <td class="px-6 py-4 border-b"><%= contact.created_at.strftime("%B %d, %Y %H:%M") %></td>
+            </tr>
+          <% end %>
+        <% else %>
+          <tr>
+            <td colspan="5" class="px-6 py-4 text-center">No contacts found</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div> 
