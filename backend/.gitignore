@@ -1,5 +1,6 @@
 # Ignore Ruby files
 *.rb
+!config/boot.rb
 !config/routes.rb
 !config/application.rb
 !app/controllers/*.rb
