@@ -16,6 +16,8 @@
 /frontend/.env.test.local
 /frontend/.env.production.local
 
+.next
+
 # System files
 .DS_Store
 .idea/
